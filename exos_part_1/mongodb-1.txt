@@ -1,0 +1,58 @@
+EX 1: use twisted_db
+
+EX 2: show databases
+
+EX 3: - use crooked_db
+       - db.createCollection("users")
+       - show databases
+
+EX 4: - use fake-db
+      - db.createCollection("fake_users")
+      - db.createCollection("fake_customers")
+      - show collections
+
+EX 5: db.fake_users.insert({name:"Mick", location:"Chicago",  age:64})
+
+EX 6: - use magic_db
+      - db.createCollection("magic_users")
+      - db.magic_users.insert({name:"Johnson"})
+      - db.magic_users.find()
+
+Ex 7: - db.createCollection("magic_products")
+      - db.magic_products.insert({pdt_name: "Crazy wine"})
+      - db.magic_products.insert({pdt_name: "Weird shoes"})
+      - db.magic_products.find()
+      - db.magic_products.findOne()
+      - "Est-ce que cette dernière commande va forcément afficher le  document correspondant au produit “Crazy Wine” ?" Je ne sais pas mais dans mon cas c'est celui qui est sorti
+
+Ex 8: - use magic_db
+      - db.magic_users.find().pretty()
+
+Ex 9: db.users.find({"age":20})
+
+Ex 10: db.products.find({"on sale"==true, "price":100})
+
+Ex 11: 
+-> création de la base artists_db : use artists_db
+-> création de la collec bands : db.createCollection("bands")
+-> insertion des données : db.bands.insert([{
+    "_id" : ObjectId("5cebdd20953b7f098ac9c129"),
+    "members" : ["Jimmy", "Eleni"]
+},{
+    "_id" : ObjectId("5cebdd20953b7f098ac9c130"),2
+    "members" : ["Eleni", "Christine"]
+},{
+    "_id" : ObjectId("5cebdd20953b7f098ac9c131"),
+    "members" : ["Lil Random", "HHH", "Doll"]
+}])
+-> commande permettant de récupérer tous les groupes composés d’un membre nommé “Eleni” : db.bands.find({"members":"Eleni"})
+
+Ex 12: db.bands.find({"members":{$in:["Eleni","Doll"]}}).pretty()
+
+Ex 13: - création de la nouvelle collec bands1
+       - commande de tri : db.bands1.find({"creation_date":{$lt:2010}})
+
+Ex 14: - créa nouvelle collec bands2
+       - db.bands2.find({"creation_date": { $gt:2010 }, "adress.city": "Coimbra"})
+
+

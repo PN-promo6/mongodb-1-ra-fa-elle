@@ -1,0 +1,8 @@
+[
+    { "jerseyNumber": 30, "age": 28, "birthPlace":[{"country": "Spain"}, {"city": "Madrid"}], "team": "Seattle Supersonics", "previousTeams": "Chicago Bulls" },
+    { "jerseyNumber": 40, "age": 40, "birthPlace":[{"country": "Spain"}, {"city": "Madrid"}], "team": "Seattle Supersonics", "previousTeams": "Orlando Magic" },
+    { "jerseyNumber": 50, "age": 28, "birthPlace":[{"country": "France"}, {"city": "Marseille"}], "team": "Chicago Bulls", "previousTeams": "Chicago Bulls" },
+    { "jerseyNumber": 10, "age": 34, "birthPlace":[{"country": "USA"}, {"city": "New-York"}], "team": "Chicago Bulls", "previousTeams": "New York Knicks" },
+    { "jerseyNumber": 40, "age": 50, "birthPlace":[{"country": "Italia"}, {"city": "Palerma"}], "team": "Seattle Supersonics", "previousTeams": "Chicago Bulls" },
+    { "jerseyNumber": 30, "age": 48, "birthPlace":[{"country": "Spain"}, {"city": "Barcelona"}], "team": "Chicago Bulls", "previousTeams": "Miami Heat" }
+]

@@ -1,0 +1,10 @@
+1. Écrivez une requête MongoDB pour afficher tous les documents dans les restaurants de la collection
+   -> db.restaus.find().pretty()
+
+2. Afficher les champs restaurant_id, nom, arrondissement et cuisine pour 
+    tous les documents du restaurant de la collection
+    -> db.restaus.find({},{"restaurant_id" : 1,"name":1,"borough":1,"cuisine" :1})
+
+3. Afficher les champs restaurant_id, nom, arrondissement et cuisine, mais excluez le champ _id 
+    pour tous les documents du restaurant de la collection. 
+    -> db.restaus.find()

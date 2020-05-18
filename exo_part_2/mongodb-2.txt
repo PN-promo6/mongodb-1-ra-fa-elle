@@ -1,0 +1,35 @@
+-> création de la BDD players : use players_db
+-> création de la collection players : db.createCollection("players")
+-> import du tableau json : mongoimport --db players_db  --collection players  --file /home/raphaelle/Documents/players.json --jsonArray
+
+15 – Récupérer tous les documents possédant une propriété team dont la valeur 
+     est la chaîne de caractère "Seattle Supersonics" :
+    -> db.players.find({team: "Seattle Supersonics"})
+
+16 – Récupérer tous les documents possédant une propriété jerseyNumber dont 
+     la valeur est l’entier 40 :
+    -> db.players.find({"jerseyNumber":40})
+
+17 – Récupérer tous les documents possédant une propriété previousTeams dont la 
+      valeur, qui est un tableau de chaînes de caractères, contient la 
+      chaîne "Chicago Bulls" :
+    -> db.players.find({previousTeams: "Chicago Bulls"})
+
+18 – Récupérer tous les documents possédant une propriété previousTeams dont la valeur, 
+     qui est un tableau de chaînes de  caractères, contient la chaîne "Chicago Bulls"
+     ou la chaîne "Miami Heat" :
+     -> db.players.find({"previousTeams":{$in:["Chicago Bulls","Miami Heat"]}})
+
+19 – Récupérer tous les documents possédant une propriété previousTeams dont la valeur, 
+    qui est un tableau de chaînes de caractères, contient la chaîne "Orlando Magic" 
+    et la chaîne "New York Knicks" :
+    -> db.players.find({"previousTeams":{$all:["Orlando Magic","New York Knicks"]}})
+
+20 – Récupérer tous les documents possédant une propriété age dont la valeur est 
+    un entier supérieur à 30 :
+    -> db.players.find({age: {$gt:30}})
+
+21 – Récupérer tous les documents possédant une propriété birthPlace, qui elle-même 
+    possède une propriété country dont la valeur est une chaîne de caractères ayant 
+    pour valeur "Spain" :
+    -> db.players.find({"birthPlace.country": "Spain"})
